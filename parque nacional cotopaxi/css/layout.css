@@ -1,0 +1,204 @@
+/* =============================================================
+   LAYOUT.CSS
+   Encabezado, navegacion, pie de pagina y estructura responsive.
+   ============================================================= */
+
+.cabecera {
+  border-bottom: 1px solid var(--color-surface-borde);
+  background-color: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.cabecera__contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-md);
+  padding-block: 0.85rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--color-primario);
+}
+
+.logo__icono {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+
+/* Boton hamburguesa: solo visible en pantallas pequenas.
+   Progresivo: si JS no carga, el menu principal permanece visible
+   (ver regla .nav-principal mas abajo y js/nav.js). */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primario);
+  color: var(--color-primario);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu-toggle__icono {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.nav-principal__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-principal__enlace {
+  display: inline-block;
+  padding: 0.4rem 0.15rem;
+  color: var(--color-texto);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-principal__enlace:hover {
+  color: var(--color-primario);
+}
+
+/* La pagina activa se marca con borde + texto en negrita y ademas
+   con aria-current="page" en el HTML: nunca solo con color. */
+.nav-principal__enlace[aria-current="page"] {
+  border-bottom-color: var(--color-primario);
+  color: var(--color-primario);
+}
+
+/* En escritorio el menu siempre esta visible y el boton oculto */
+@media (min-width: 64rem) {
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .nav-principal {
+    display: block !important;
+  }
+}
+
+/* En movil: solo colapsamos el menu cuando JS confirmo que puede
+   controlar el boton (clase js-listo en <html>). Sin JS, el menu
+   permanece abierto y usable con teclado. */
+@media (max-width: 63.9375rem) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  html.js-listo .nav-principal {
+    display: none;
+  }
+
+  html.js-listo .nav-principal.menu-abierto {
+    display: block;
+  }
+
+  .nav-principal__lista {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-block: var(--espacio-sm);
+  }
+}
+
+.contenido-principal {
+  display: block;
+}
+
+.contenido-principal:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+section {
+  padding-block: var(--espacio-lg);
+}
+
+.seccion-superficie {
+  background-color: var(--color-surface);
+}
+
+.pie-pagina {
+  background-color: var(--color-primario-oscuro);
+  color: var(--color-sobre-primario);
+  padding-block: var(--espacio-lg);
+  margin-top: var(--espacio-lg);
+}
+
+.pie-pagina a,
+.pie-pagina h2 {
+  color: var(--color-sobre-primario);
+}
+
+.pie-pagina__columnas {
+  display: grid;
+  gap: var(--espacio-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .pie-pagina__columnas {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.pie-pagina__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pie-pagina__lista li {
+  margin-bottom: 0.35rem;
+}
+
+.pie-pagina hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-block: var(--espacio-md);
+}
+
+.pie-pagina small {
+  opacity: 0.9;
+}
+
+/* Cuadricula generica reutilizable */
+.cuadricula {
+  display: grid;
+  gap: var(--espacio-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40rem) {
+  .cuadricula--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 56rem) {
+  .cuadricula--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

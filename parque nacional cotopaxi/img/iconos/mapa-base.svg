@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <rect x="0" y="0" width="800" height="560" fill="#c7e6bf"/>
+
+  <path d="M260,0 L520,0 C560,60 540,120 580,170
+           C630,230 700,240 760,280
+           C800,305 800,560 800,560 L0,560 C0,500 40,460 30,400
+           C20,340 70,300 110,250 C160,190 150,120 200,70
+           C225,42 245,18 260,0 Z"
+        fill="#e6dab4"/>
+
+  <polygon points="350,108 410,100 448,135 460,180 478,220 458,260
+                   468,300 438,335 405,358 365,365 330,348 305,318
+                   295,278 305,238 290,200 310,160 320,130"
+        fill="#f3efe7" stroke="#ded6c2" stroke-width="1.5"/>
+
+  <ellipse cx="296" cy="332" rx="78" ry="42" fill="#aed4ea" stroke="#8cb9d6" stroke-width="2"/>
+  <ellipse cx="296" cy="332" rx="56" ry="26" fill="#9bc6e2" opacity="0.7"/>
+
+  <g fill="#9bbf8f" opacity="0.6">
+    <circle cx="140" cy="80" r="3.5"/>
+    <circle cx="165" cy="105" r="3"/>
+    <circle cx="670" cy="120" r="3.5"/>
+    <circle cx="700" cy="160" r="3"/>
+    <circle cx="730" cy="220" r="3.5"/>
+    <circle cx="90" cy="220" r="3"/>
+    <circle cx="60" cy="320" r="3.5"/>
+    <circle cx="650" cy="500" r="3"/>
+    <circle cx="540" cy="100" r="3"/>
+    <circle cx="120" cy="480" r="3.5"/>
+  </g>
+
+  <path d="M600,459 C580,420 560,380 535,345 C505,305 470,290 440,290"
+        fill="none" stroke="#8a9a87" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round" opacity="0.85"/>
+
+  <path d="M440,290 C400,295 370,305 350,318"
+        fill="none" stroke="#8a9a87" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round" opacity="0.85"/>
+
+  <path d="M380,150 C392,190 400,225 396,260"
+        fill="none" stroke="#8a9a87" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round" opacity="0.85"/>
+
+  <path d="M260,355 C235,385 218,412 208,440"
+        fill="none" stroke="#8a9a87" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round" opacity="0.85"/>
+
+  <path d="M600,459 C500,448 430,420 374,372 C345,378 300,385 260,392
+           C195,375 165,300 136,252 C100,212 70,170 50,120"
+        fill="none" stroke="#9aa597" stroke-width="2.5" opacity="0.65"/>
+
+  <path d="M600,459 C660,440 720,420 770,400"
+        fill="none" stroke="#9aa597" stroke-width="2.5" opacity="0.65"/>
+</svg>

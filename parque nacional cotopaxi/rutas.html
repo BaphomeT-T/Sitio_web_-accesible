@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rutas y senderos | Parque Nacional Cotopaxi</title>
+  <meta name="description" content="Mapa de senderos y tabla comparativa de rutas del Parque Nacional Cotopaxi con distancia, tiempo estimado y dificultad.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a class="salto-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="cabecera">
+    <div class="envoltura cabecera__contenedor">
+      <a class="logo" href="index.html">
+        <img class="logo__icono" src="img/iconos/logo-volcan.svg" alt="" width="48" height="48">
+        Parque Nacional Cotopaxi
+      </a>
+
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+        Menú
+      </button>
+
+      <nav class="nav-principal" id="menu-principal">
+        <ul class="nav-principal__lista">
+          <li><a class="nav-principal__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav-principal__enlace" href="planifica.html">Planifica tu visita</a></li>
+          <li><a class="nav-principal__enlace" href="rutas.html" aria-current="page">Rutas y senderos</a></li>
+          <li><a class="nav-principal__enlace" href="servicios.html">Servicios</a></li>
+          <li><a class="nav-principal__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="contenido-principal" tabindex="-1">
+
+    <section class="envoltura">
+      <h1>Rutas y senderos</h1>
+      <p>
+        El parque ofrece senderos para distintos niveles de condición física, desde
+        caminatas cortas junto a la laguna de Limpiopungo hasta el ascenso técnico a la
+        cumbre del volcán.
+      </p>
+    </section>
+
+    <section class="envoltura">
+      <h2>Mapa interactivo del parque</h2>
+      <p>
+        Selecciona cualquiera de los puntos del mapa para ver información general
+        del lugar: qué es, a qué distancia está del control de ingreso y qué nivel
+        de accesibilidad tiene. El mapa es un esquema de referencia, no a escala.
+      </p>
+
+      <div class="mapa-interactivo">
+        <div class="mapa-interactivo__lienzo">
+          <img class="mapa-interactivo__fondo" src="img/iconos/mapa-base.svg" alt="" aria-hidden="true">
+
+          <button type="button" class="mapa-interactivo__punto" style="left: 47%; top: 22%;" data-abrir-modal="modal-cumbre">
+            <span class="mapa-interactivo__punto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 1.5c-4.14 0-7.5 3.36-7.5 7.5 0 5.25 6.18 11.34 7.04 12.16a.65.65 0 0 0 .92 0C13.32 20.34 19.5 14.25 19.5 9c0-4.14-3.36-7.5-7.5-7.5Z" fill="currentColor"/><circle cx="12" cy="9" r="3" fill="#ffffff"/></svg>
+            </span>
+            <span class="mapa-interactivo__punto-etiqueta">Cumbre del Cotopaxi</span>
+          </button>
+
+          <button type="button" class="mapa-interactivo__punto" style="left: 53%; top: 49%;" data-abrir-modal="modal-refugio">
+            <span class="mapa-interactivo__punto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 1.5c-4.14 0-7.5 3.36-7.5 7.5 0 5.25 6.18 11.34 7.04 12.16a.65.65 0 0 0 .92 0C13.32 20.34 19.5 14.25 19.5 9c0-4.14-3.36-7.5-7.5-7.5Z" fill="currentColor"/><circle cx="12" cy="9" r="3" fill="#ffffff"/></svg>
+            </span>
+            <span class="mapa-interactivo__punto-etiqueta">Refugio José Rivas</span>
+          </button>
+
+          <button type="button" class="mapa-interactivo__punto" style="left: 37%; top: 59%;" data-abrir-modal="modal-limpiopungo">
+            <span class="mapa-interactivo__punto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 1.5c-4.14 0-7.5 3.36-7.5 7.5 0 5.25 6.18 11.34 7.04 12.16a.65.65 0 0 0 .92 0C13.32 20.34 19.5 14.25 19.5 9c0-4.14-3.36-7.5-7.5-7.5Z" fill="currentColor"/><circle cx="12" cy="9" r="3" fill="#ffffff"/></svg>
+            </span>
+            <span class="mapa-interactivo__punto-etiqueta">Laguna de Limpiopungo</span>
+          </button>
+
+          <button type="button" class="mapa-interactivo__punto" style="left: 26%; top: 82%;" data-abrir-modal="modal-salitre">
+            <span class="mapa-interactivo__punto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 1.5c-4.14 0-7.5 3.36-7.5 7.5 0 5.25 6.18 11.34 7.04 12.16a.65.65 0 0 0 .92 0C13.32 20.34 19.5 14.25 19.5 9c0-4.14-3.36-7.5-7.5-7.5Z" fill="currentColor"/><circle cx="12" cy="9" r="3" fill="#ffffff"/></svg>
+            </span>
+            <span class="mapa-interactivo__punto-etiqueta">Sendero El Salitre</span>
+          </button>
+
+          <button type="button" class="mapa-interactivo__punto" style="left: 75%; top: 82%;" data-abrir-modal="modal-garita">
+            <span class="mapa-interactivo__punto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 1.5c-4.14 0-7.5 3.36-7.5 7.5 0 5.25 6.18 11.34 7.04 12.16a.65.65 0 0 0 .92 0C13.32 20.34 19.5 14.25 19.5 9c0-4.14-3.36-7.5-7.5-7.5Z" fill="currentColor"/><circle cx="12" cy="9" r="3" fill="#ffffff"/></svg>
+            </span>
+            <span class="mapa-interactivo__punto-etiqueta">Garita de control</span>
+          </button>
+
+
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section class="seccion-superficie">
+      <div class="envoltura">
+        <h2>Detalle de rutas</h2>
+
+        <form data-rol="filtro-rutas">
+          <fieldset class="filtro-grupo">
+            <legend>Filtrar por dificultad</legend>
+            <div class="filtro-opciones">
+              <input type="radio" name="dificultad" id="dif-todas" value="todas" checked>
+              <label for="dif-todas">Todas</label>
+
+              <input type="radio" name="dificultad" id="dif-facil" value="facil">
+              <label for="dif-facil">Fácil</label>
+
+              <input type="radio" name="dificultad" id="dif-moderada" value="moderada">
+              <label for="dif-moderada">Moderada</label>
+
+              <input type="radio" name="dificultad" id="dif-dificil" value="dificil">
+              <label for="dif-dificil">Difícil</label>
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="campo-busqueda">
+          <label for="buscar-ruta">Buscar ruta por nombre</label>
+          <input type="search" id="buscar-ruta" name="buscar-ruta" placeholder="Por ejemplo: Limpiopungo">
+        </div>
+
+        <p id="resultado-busqueda" class="resultado-busqueda">Mostrando 4 de 4 rutas.</p>
+
+        <div class="tabla-envoltura">
+          <table class="tabla-accesible">
+            <caption>Rutas disponibles, distancia, tiempo estimado y dificultad</caption>
+            <thead>
+              <tr>
+                <th scope="col">Ruta</th>
+                <th scope="col">Distancia</th>
+                <th scope="col">Tiempo estimado</th>
+                <th scope="col">Dificultad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-rol="fila-ruta" data-dificultad="facil" data-nombre="Laguna de Limpiopungo">
+                <th scope="row">Laguna de Limpiopungo</th>
+                <td>2 km (circuito)</td>
+                <td>1 hora</td>
+                <td><span class="dificultad dificultad--facil">● Fácil</span></td>
+              </tr>
+              <tr data-rol="fila-ruta" data-dificultad="moderada" data-nombre="Refugio José Rivas">
+                <th scope="row">Refugio José Rivas</th>
+                <td>1.5 km</td>
+                <td>45 minutos</td>
+                <td><span class="dificultad dificultad--moderada">●● Moderada</span></td>
+              </tr>
+              <tr data-rol="fila-ruta" data-dificultad="moderada" data-nombre="Sendero El Salitre">
+                <th scope="row">Sendero El Salitre</th>
+                <td>3 km</td>
+                <td>1 hora 30 minutos</td>
+                <td><span class="dificultad dificultad--moderada">●● Moderada</span></td>
+              </tr>
+              <tr data-rol="fila-ruta" data-dificultad="dificil" data-nombre="Cumbre del Cotopaxi">
+                <th scope="row">Cumbre del Cotopaxi</th>
+                <td>5 km (desde el refugio)</td>
+                <td>6 a 8 horas</td>
+                <td><span class="dificultad dificultad--dificil">●●● Difícil</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <dialog class="modal" id="modal-cumbre">
+    <div class="modal__cabecera">
+      <h2>Cumbre del Cotopaxi</h2>
+      <button type="button" class="modal__cerrar" data-cerrar-modal>Cerrar</button>
+    </div>
+    <p class="lugar-modal__categoria">Punto más alto del parque</p>
+    <p>
+      Cráter activo a 5897 metros sobre el nivel del mar. El ascenso desde el
+      refugio José Rivas requiere equipo de montañismo, arnés, piolet y guía
+      certificado de alta montaña.
+    </p>
+    <dl class="lugar-modal__datos">
+      <div><dt>Distancia desde la garita:</dt> <dd>Aproximadamente 12 km en vehículo más 5 km de sendero.</dd></div>
+      <div><dt>Tiempo estimado:</dt> <dd>6 a 8 horas desde el refugio.</dd></div>
+      <div><dt>Accesibilidad:</dt> <dd>No accesible para silla de ruedas. Requiere condición física alta y experiencia en montaña.</dd></div>
+    </dl>
+  </dialog>
+
+  <dialog class="modal" id="modal-refugio">
+    <div class="modal__cabecera">
+      <h2>Refugio José Rivas</h2>
+      <button type="button" class="modal__cerrar" data-cerrar-modal>Cerrar</button>
+    </div>
+    <p class="lugar-modal__categoria">Punto de descanso y aclimatación</p>
+    <p>
+      Refugio de montaña a 4800 metros, con cafetería, baños y zona de descanso
+      techada. Es el punto de partida habitual para el ascenso a la cumbre.
+    </p>
+    <dl class="lugar-modal__datos">
+      <div><dt>Distancia desde la garita:</dt> <dd>Aproximadamente 9 km en vehículo más 1.5 km de sendero.</dd></div>
+      <div><dt>Tiempo estimado:</dt> <dd>45 minutos desde el parqueadero alto.</dd></div>
+      <div><dt>Accesibilidad:</dt> <dd>Sendero de tierra con pendiente pronunciada; no accesible para silla de ruedas. Baño sin adaptación.</dd></div>
+    </dl>
+  </dialog>
+
+  <dialog class="modal" id="modal-limpiopungo">
+    <div class="modal__cabecera">
+      <h2>Laguna de Limpiopungo</h2>
+      <button type="button" class="modal__cerrar" data-cerrar-modal>Cerrar</button>
+    </div>
+    <p class="lugar-modal__categoria">Humedal y mirador de fauna</p>
+    <p>
+      Laguna altoandina rodeada de un páramo donde habitan patos silvestres y,
+      ocasionalmente, manadas de llamas. Cuenta con un sendero circundante de
+      superficie compactada.
+    </p>
+    <dl class="lugar-modal__datos">
+      <div><dt>Distancia desde la garita:</dt> <dd>Aproximadamente 5 km en vehículo, acceso directo desde la vía principal.</dd></div>
+      <div><dt>Tiempo estimado:</dt> <dd>1 hora para el circuito completo a pie.</dd></div>
+      <div><dt>Accesibilidad:</dt> <dd>El tramo junto al parqueadero es transitable con silla de ruedas con asistencia; el resto del circuito tiene superficie irregular.</dd></div>
+    </dl>
+  </dialog>
+
+  <dialog class="modal" id="modal-salitre">
+    <div class="modal__cabecera">
+      <h2>Sendero El Salitre</h2>
+      <button type="button" class="modal__cerrar" data-cerrar-modal>Cerrar</button>
+    </div>
+    <p class="lugar-modal__categoria">Sendero interpretativo</p>
+    <p>
+      Sendero de bosque de pajonal con señalización interpretativa sobre la
+      flora endémica del páramo. Ideal para visitas familiares de medio día.
+    </p>
+    <dl class="lugar-modal__datos">
+      <div><dt>Distancia desde la garita:</dt> <dd>Aproximadamente 4 km en vehículo.</dd></div>
+      <div><dt>Tiempo estimado:</dt> <dd>1 hora y 30 minutos.</dd></div>
+      <div><dt>Accesibilidad:</dt> <dd>Superficie de tierra compactada con desniveles leves; no recomendado para silla de ruedas sin asistencia.</dd></div>
+    </dl>
+  </dialog>
+
+  <dialog class="modal" id="modal-garita">
+    <div class="modal__cabecera">
+      <h2>Garita de control</h2>
+      <button type="button" class="modal__cerrar" data-cerrar-modal>Cerrar</button>
+    </div>
+    <p class="lugar-modal__categoria">Ingreso oficial al parque</p>
+    <p>
+      Punto de registro obligatorio de visitantes y pago de entrada. Incluye
+      el parqueadero principal y la oficina de información turística.
+    </p>
+    <dl class="lugar-modal__datos">
+      <div><dt>Distancia desde la garita:</dt> <dd>Punto de referencia (0 km).</dd></div>
+      <div><dt>Tiempo estimado:</dt> <dd>Registro de 5 a 10 minutos.</dd></div>
+      <div><dt>Accesibilidad:</dt> <dd>Edificio de planta baja con rampa de acceso y baño adaptado.</dd></div>
+    </dl>
+  </dialog>
+
+
+
+  <footer class="pie-pagina">
+    <div class="envoltura pie-pagina__columnas">
+      <div>
+        <h2>Sobre el parque</h2>
+        <p>
+          Parque Nacional Cotopaxi. Área protegida administrada por el Ministerio del
+          Ambiente, Agua y Transición Ecológica de Ecuador.
+        </p>
+      </div>
+      <div>
+        <h2>Mapa del sitio</h2>
+        <ul class="pie-pagina__lista">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="planifica.html">Planifica tu visita</a></li>
+          <li><a href="rutas.html">Rutas y senderos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contacto rápido</h2>
+        <address class="pie-pagina__lista">
+          Teléfono: <a href="tel:+593239998300">+593 2 399 8300</a><br>
+          Correo: <a href="mailto:info@cotopaxipark.ec">info@cotopaxipark.ec</a>
+        </address>
+      </div>
+    </div>
+    <div class="envoltura">
+      <hr>
+      <small>© 2026 Parque Nacional Cotopaxi. Proyecto académico de accesibilidad web — Usabilidad y Accesibilidad.</small>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/rutas.js" defer></script>
+</body>
+</html>
