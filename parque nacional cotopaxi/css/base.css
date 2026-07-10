@@ -65,6 +65,7 @@ html {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
     scroll-behavior: auto !important;
   }
 }
@@ -111,6 +112,29 @@ h2 {
 
 h3 {
   font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.4rem);
+}
+
+/* En celular reducimos un poco el texto base y los titulos para que
+   no se vean sobredimensionados en pantallas angostas. Se usan
+   unidades relativas (%, rem, clamp) para no interferir con el zoom
+   del navegador: a 400% de zoom el contenido debe seguir reflotando
+   sin scroll horizontal (WCAG 1.4.10). */
+@media (max-width: 30rem) {
+  html {
+    font-size: 93.75%;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 1.3rem + 2vw, 2.1rem);
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 1.1rem + 1.2vw, 1.6rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 1rem + 0.6vw, 1.25rem);
+  }
 }
 
 p {

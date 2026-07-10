@@ -409,6 +409,12 @@ table.tabla-accesible {
   display: block;
 }
 
+.mapa-interactivo__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .mapa-interactivo__punto {
   position: absolute;
   transform: translate(-50%, -100%);
@@ -586,6 +592,15 @@ dialog.modal {
   border-radius: var(--radio-borde);
   padding: var(--espacio-lg);
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 30rem) {
+  dialog.modal {
+    width: 92vw;
+    padding: var(--espacio-md);
+    max-height: 85vh;
+    overflow-y: auto;
+  }
 }
 
 dialog.modal::backdrop {

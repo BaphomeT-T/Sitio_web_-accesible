@@ -15,11 +15,17 @@
   <header class="cabecera">
     <div class="envoltura cabecera__contenedor">
       <a class="logo" href="index.html">
-        <img class="logo__icono" src="img/iconos/logo-volcan.svg" alt="" width="48" height="48">
+        <img class="logo__icono" src="img/iconos/logo-volcan.svg" alt="Icono de un volcán" width="48" height="48">
         Parque Nacional Cotopaxi
       </a>
 
       <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-toggle__icono menu-toggle__icono--abrir" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="menu-toggle__icono menu-toggle__icono--cerrar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
         Menú
       </button>
 
@@ -148,7 +154,7 @@
           Ambiente, Agua y Transición Ecológica de Ecuador.
         </p>
       </div>
-      <div>
+      <nav aria-label="Mapa del sitio">
         <h2>Mapa del sitio</h2>
         <ul class="pie-pagina__lista">
           <li><a href="index.html">Inicio</a></li>
@@ -157,7 +163,7 @@
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
-      </div>
+      </nav>
       <div>
         <h2>Contacto rápido</h2>
         <address class="pie-pagina__lista">
