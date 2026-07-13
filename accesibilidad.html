@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Declaración de accesibilidad | Parque Nacional Cotopaxi</title>
+  <meta name="description" content="Declaración de accesibilidad del sitio web del Parque Nacional Cotopaxi: estado de conformidad con las WCAG 2.2, metodología de evaluación y vías de contacto.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a class="salto-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="cabecera">
+    <div class="envoltura cabecera__contenedor">
+      <a class="logo" href="index.html">
+        <img class="logo__icono" src="img/iconos/logo-volcan.svg" alt="Icono de un volcán" width="48" height="48">
+        Parque Nacional Cotopaxi
+      </a>
+
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-toggle__icono menu-toggle__icono--abrir" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="menu-toggle__icono menu-toggle__icono--cerrar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        Menú
+      </button>
+
+      <nav class="nav-principal" id="menu-principal">
+        <ul class="nav-principal__lista">
+          <li><a class="nav-principal__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav-principal__enlace" href="planifica.html">Planifica tu visita</a></li>
+          <li><a class="nav-principal__enlace" href="rutas.html">Rutas y senderos</a></li>
+          <li><a class="nav-principal__enlace" href="servicios.html">Servicios</a></li>
+          <li><a class="nav-principal__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal" class="contenido-principal" tabindex="-1">
+
+    <section class="hero envoltura">
+      <h1 class="hero__titulo">Declaración de accesibilidad</h1>
+      <p class="hero__intro">
+        El Parque Nacional Cotopaxi (sitio web informativo) se compromete a que su
+        contenido pueda ser utilizado por la mayor cantidad posible de personas,
+        incluyendo quienes emplean tecnologías asistivas o métodos alternativos de
+        interacción, siguiendo las recomendaciones del ecosistema W3C/WAI.
+      </p>
+    </section>
+
+    <section class="seccion-superficie">
+      <div class="envoltura">
+        <h2>Estado de conformidad</h2>
+        <span class="insignia insignia--abierto">Conforme en gran medida — WCAG 2.2 nivel AA</span>
+        <p>
+          Este sitio web ha sido desarrollado y evaluado aplicando los criterios de éxito
+          de las <strong>Web Content Accessibility Guidelines (WCAG) 2.2</strong>, niveles
+          A y AA. La evaluación de conformidad realizada por el equipo del proyecto
+          determinó que el sitio cumple con la mayoría de los criterios aplicables de
+          ambos niveles en las cinco páginas que lo componen: Inicio, Planifica tu
+          visita, Rutas y senderos, Servicios y Contáctanos.
+        </p>
+        <p>
+          Además de las WCAG 2.2, durante el desarrollo se consideraron las
+          recomendaciones del resto del ecosistema W3C/WAI: <strong>WAI-ARIA</strong>
+          para reforzar la accesibilidad de los componentes dinámicos, <strong>ATAG</strong>
+          para orientar la elección de herramientas de creación de contenido, y
+          <strong>UAAG</strong> para verificar el comportamiento del sitio en distintos
+          navegadores, dispositivos y tecnologías asistivas.
+        </p>
+      </div>
+    </section>
+
+    <section class="envoltura">
+      <h2>Medidas de accesibilidad implementadas</h2>
+      <div class="cuadricula cuadricula--2">
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Perceptible</h3>
+          <p>
+            Alternativas textuales en imágenes informativas, imágenes decorativas
+            marcadas con <code>alt=""</code>, subtítulos en el contenido audiovisual y
+            una relación de contraste de texto y fondo conforme al nivel AA, incluso al
+            aplicar un zoom de hasta el 250&nbsp;%.
+          </p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Operable</h3>
+          <p>
+            Navegación completa mediante teclado, enlace para saltar al contenido
+            principal, indicadores de foco visibles y ausencia de trampas de teclado en
+            menús, formularios, filtros y mapa interactivo.
+          </p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Comprensible</h3>
+          <p>
+            Estructura uniforme en todas las páginas, títulos jerárquicos, idioma
+            declarado (<code>lang="es"</code>), etiquetas e instrucciones visibles en los
+            formularios y mensajes de error comprensibles que no dependen únicamente del
+            color.
+          </p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Robusto</h3>
+          <p>
+            HTML5 semántico (<code>header</code>, <code>nav</code>, <code>main</code>,
+            <code>section</code>, <code>article</code>, <code>fieldset</code>,
+            <code>footer</code>) complementado con atributos WAI-ARIA únicamente cuando
+            la semántica nativa no resultó suficiente.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion-superficie">
+      <div class="envoltura">
+        <h2>Metodología de evaluación</h2>
+        <p>
+          La conformidad de este sitio se verificó mediante un proceso que combinó
+          evaluación automática, revisión manual y validación con tecnologías
+          asistivas, aplicado a las cinco páginas del sitio:
+        </p>
+        <div class="tabla-envoltura">
+          <table class="tabla-accesible">
+            <caption>Herramientas empleadas en la evaluación de accesibilidad</caption>
+            <thead>
+              <tr>
+                <th scope="col">Herramienta</th>
+                <th scope="col">Propósito</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>WAVE Web Accessibility Evaluation Tool</td>
+                <td>Detección automática de errores, alertas, problemas de contraste, estructura semántica y atributos ARIA.</td>
+              </tr>
+              <tr>
+                <td>Google Chrome</td>
+                <td>Verificación del funcionamiento general del sitio, navegación por teclado y adaptación responsive.</td>
+              </tr>
+              <tr>
+                <td>Mozilla Firefox + NVDA</td>
+                <td>Validación del comportamiento del sitio con lector de pantalla y comprobación de compatibilidad entre navegadores.</td>
+              </tr>
+              <tr>
+                <td>W3C HTML Validator</td>
+                <td>Revisión de la sintaxis del código HTML y verificación de la estructura semántica.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Las pruebas manuales incluyeron navegación completa con la tecla
+          <kbd>Tab</kbd>, verificación de la visibilidad del foco, comprobación del
+          enlace de salto al contenido principal, validación del formulario de
+          contacto (etiquetas, instrucciones, mensajes de error y agrupación mediante
+          <code>fieldset</code>/<code>legend</code>) y revisión de subtítulos en el
+          contenido multimedia.
+        </p>
+      </div>
+    </section>
+
+    <section class="envoltura">
+      <h2>Limitaciones conocidas</h2>
+      <p>
+        Pese a los esfuerzos realizados, es posible que persistan situaciones puntuales
+        no detectadas durante la evaluación. Este sitio fue desarrollado como un
+        proyecto académico y su contenido se revisa de forma periódica para mantener y
+        mejorar su nivel de accesibilidad.
+      </p>
+    </section>
+
+    <section class="seccion-superficie">
+      <div class="envoltura">
+        <h2>Comunicar un problema de accesibilidad</h2>
+        <p>
+          Si al navegar por este sitio detectas alguna barrera de accesibilidad,
+          puedes comunicarte a través de los siguientes canales:
+        </p>
+        <address class="pie-pagina__lista">
+          Teléfono: <a href="tel:+593239998300">+593 2 399 8300</a><br>
+          Correo: <a href="mailto:info@cotopaxipark.ec">info@cotopaxipark.ec</a><br>
+          También puedes usar el <a href="contacto.html">formulario de contacto</a>.
+        </address>
+      </div>
+    </section>
+
+    <section class="envoltura">
+      <h2>Elaboración de esta declaración</h2>
+      <p>
+        Esta declaración fue elaborada en julio de 2026 con base en la autoevaluación
+        realizada por el equipo del proyecto <em>Sitio web accesible</em> de la
+        Escuela Politécnica Nacional, Facultad de Ingeniería en Sistemas, para la
+        asignatura Usabilidad y Accesibilidad (ISWD73), Grupo 1.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="envoltura pie-pagina__columnas">
+      <div>
+        <h2>Sobre el parque</h2>
+        <p>
+          Parque Nacional Cotopaxi. Área protegida administrada por el Ministerio del
+          Ambiente, Agua y Transición Ecológica de Ecuador.
+        </p>
+      </div>
+      <nav aria-label="Mapa del sitio">
+        <h2>Mapa del sitio</h2>
+        <ul class="pie-pagina__lista">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="planifica.html">Planifica tu visita</a></li>
+          <li><a href="rutas.html">Rutas y senderos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="accesibilidad.html" aria-current="page">Declaración de accesibilidad</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contacto rápido</h2>
+        <address class="pie-pagina__lista">
+          Teléfono: <a href="tel:+593239998300">+593 2 399 8300</a><br>
+          Correo: <a href="mailto:info@cotopaxipark.ec">info@cotopaxipark.ec</a>
+        </address>
+      </div>
+    </div>
+    <div class="envoltura">
+      <hr>
+      <small>© 2026 Parque Nacional Cotopaxi. Proyecto académico de accesibilidad web — Usabilidad y Accesibilidad.</small>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>
